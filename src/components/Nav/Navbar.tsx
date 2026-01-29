@@ -1,21 +1,32 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import "./nav.css";
 import Image from "next/image";
-import logo from "../../../public/logo/logo.png"
+import logo from "../../../public/logo/logo.png";
+import AuthModal from "../Auth/AuthModal";
+
 const Navbar: React.FC = () => {
+  const [open, setOpen] = useState(false);
+
   return (
     <>
       <header className="navbar">
         <div className="container navbar-inner">
-          {/* Logo */}
           <div className="logo">
-            <Image src={logo}  alt="logo" />
+            <Image src={logo} alt="logo" />
           </div>
 
-          {/* Right button */}
-          <button className="admin-btn">Admin login</button>
+          <button
+            className="admin-btn"
+            onClick={() => setOpen(true)}
+          >
+            Admin Login
+          </button>
         </div>
       </header>
+
+      {open && <AuthModal onClose={() => setOpen(false)} />}
     </>
   );
 };
