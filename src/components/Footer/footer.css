@@ -1,7 +1,7 @@
 .footer {
   background: #ffffff;
   padding: 80px 0 30px;
-  border-top: 1px solid #e5e7eb;
+  /* border-top: 1px solid #e5e7eb; */
 }
 
 /* brand */
@@ -13,8 +13,9 @@
 
 .footer-brand p {
   font-size: 14px;
-  color: #6b7280;
+  color: #1F221E;
   max-width: 320px;
+
 }
 
 .footer-brand a {
@@ -25,11 +26,11 @@
 }
 
 /* titles */
-.footer h6 {
+/* .footer h6 {
   font-size: 14px;
   font-weight: 600;
   margin-bottom: 14px;
-}
+} */
 
 /* links */
 .footer ul {
@@ -95,6 +96,7 @@
     gap: 14px;
   }
 }
+
 .social-icons svg {
   width: 34px;
   height: 34px;
@@ -107,4 +109,20 @@
 
 .social-icons svg:hover {
   background: #f3f4f6;
+}
+
+.foot-head{
+  color: #1F221E;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 160%;
+  letter-spacing: 0%;
+}
+
+.hr-foot {
+  border: none !important;
+  border-top: 1px solid #e5e7eb !important;
+  margin: 40px 0 25px !important;
+  color: #1F221E;
+  opacity: 1;
 }

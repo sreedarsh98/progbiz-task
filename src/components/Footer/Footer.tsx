@@ -25,13 +25,13 @@ const Footer: React.FC = () => {
             <Image src={logo}  alt="logo" />
           </div>
 
-              <p>
+              <p className="mt-2">
                 Innovative health assistant app that leverages artificial
                 intelligence to provide personalized wellness
                 recommendations.
               </p>
 
-              <a href="mailto:hello@reppoo.com">
+              <a className="mt-2" href="mailto:hello@reppoo.com">
                 hello@reppoo.com
               </a>
             </div>
@@ -39,7 +39,7 @@ const Footer: React.FC = () => {
 
           {/* Company */}
           <div className="col-lg-2">
-            <h6>Company</h6>
+            <h6 className="foot-head">Company</h6>
             <ul>
               <li>Home</li>
               <li>Early Access</li>
@@ -67,7 +67,7 @@ const Footer: React.FC = () => {
 
         </div>
 
-        <hr />
+        <hr className="hr-foot" />
 
         <div className="footer-bottom">
           <p>© Copyright Reppoo</p>
