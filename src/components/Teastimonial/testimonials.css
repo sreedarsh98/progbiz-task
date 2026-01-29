@@ -1,6 +1,6 @@
 .testimonial-section {
-  padding: 100px 0;
-  background: #ffffff;
+  background: #F4F5F6;
+  padding: 80px 40px;
 }
 
 .testimonial-title {
@@ -143,4 +143,8 @@
 .testimonial-section
   .swiper-button-next::after {
   font-size: 12px !important;
+}
+
+ .swiper-navigation-icon{
+  width: 10px !important;
 }

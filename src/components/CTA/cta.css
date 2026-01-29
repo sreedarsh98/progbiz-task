@@ -1,0 +1,105 @@
+.cta-section {
+  position: relative;
+  padding: 120px 0;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+/* circular rings */
+.cta-section::before,
+.cta-section::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid #e5e7eb;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* .cta-section::before {
+  width: 900px;
+  height: 900px;
+  top: -300px;
+}
+
+.cta-section::after {
+  width: 1200px;
+  height: 1200px;
+  top: -450px;
+} */
+
+/* floating icons */
+.cta-icon {
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+}
+
+.icon-1 {
+  top: 80px;
+  left: 25%;
+}
+
+.icon-2 {
+  top: 120px;
+  right: 25%;
+}
+
+.icon-3 {
+  bottom: 120px;
+  right: 30%;
+}
+
+.icon-4 {
+  bottom: 160px;
+  left: 30%;
+}
+
+/* content */
+.cta-badge {
+  font-size: 16px;
+  font-weight: 500;
+  color: #23262F;
+  letter-spacing: 0;
+}
+
+.cta-title {
+  font-size: 64px;
+  font-weight: 500;
+  margin-top: 20px;
+  color: #23262F;
+}
+
+.cta-text {
+  max-width: 520px;
+  margin: 18px auto 0;
+  color: #777E90;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+/* buttons */
+.cta-buttons {
+  margin-top: 28px;
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+}
+
+/* mobile */
+@media (max-width: 768px) {
+  .cta-title {
+    font-size: 30px;
+  }
+
+  .cta-icon {
+    display: none;
+  }
+}

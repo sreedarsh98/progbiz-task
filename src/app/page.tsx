@@ -1,3 +1,5 @@
+import CTA from "@/components/CTA/CTA";
+import FAQ from "@/components/Faq/FAQ";
 import HealthSection from "@/components/Healthsection/HealthSection";
 import Hero from "@/components/Hero/Hero";
 import Navbar from "@/components/Nav/Navbar";
@@ -10,6 +12,8 @@ const page: React.FC = () => {
       <Hero />
       <HealthSection/>
       <Testimonials/>
+      <FAQ/>
+      <CTA/>
     </>
   );
 };
