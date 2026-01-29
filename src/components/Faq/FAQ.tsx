@@ -1,46 +1,55 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./faq.css";
 
-const faqData = [
-  {
-    question: "What features does the AI Health Assistant offer?",
-    answer:
-      "Our AI Health Assistant provides personalized health insights, daily routines, nutrition planning, and real-time wellness tracking.",
-  },
-  {
-    question: "Is the app customizable to my needs?",
-    answer:
-      "Yes, the app adapts based on your lifestyle, preferences, goals, and daily behavior.",
-  },
-  {
-    question: "How accurate is the AI health tracking?",
-    answer:
-      "Experience the future of personalized health and wellness before everyone else. Join our exclusive early access program and help shape the future of AI-powered health coaching.",
-  },
-  {
-    question: "Do I need any special equipment?",
-    answer:
-      "No special equipment is required. The app works directly from your smartphone.",
-  },
-  {
-    question: "How does the free trial work?",
-    answer:
-      "You can try all premium features free for a limited time before choosing a plan.",
-  },
-];
+interface Faq {
+  _id: string;
+  question: string;
+  answer: string;
+}
 
 const FAQ: React.FC = () => {
-  const [openIndex, setOpenIndex] = useState<number | null>(2);
+  const [faqs, setFaqs] = useState<Faq[]>([]);
+  const [openIndex, setOpenIndex] = useState<number | null>(0);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchFaqs = async () => {
+      try {
+        const res = await fetch("/api/faq");
+
+        const data = await res.json();
+        setFaqs(data);
+      } catch (error) {
+        console.error("Failed to load FAQs");
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchFaqs();
+  }, []);
+
+  if (loading) {
+    return (
+      <section className="faq-section">
+        <div className="container text-center">
+          <p>Loading FAQs...</p>
+        </div>
+      </section>
+    );
+  }
 
   return (
     <section className="faq-section">
       <div className="container">
 
         {/* Header */}
-        <div className="faq-header ">
-          <h2 className="text-center">Frequently Asked Questions</h2>
+        <div className="faq-header">
+          <h2 className="text-center">
+            Frequently Asked Questions
+          </h2>
           <p className="text-center">
             Get answers to common questions about our AI health assistant app
           </p>
@@ -48,9 +57,15 @@ const FAQ: React.FC = () => {
 
         {/* FAQ List */}
         <div className="faq-list">
-          {faqData.map((item, index) => (
+          {faqs.length === 0 && (
+            <p className="text-center">
+              No FAQs available
+            </p>
+          )}
+
+          {faqs.map((item, index) => (
             <div
-              key={index}
+              key={item._id}
               className={`faq-item ${
                 openIndex === index ? "active" : ""
               }`}

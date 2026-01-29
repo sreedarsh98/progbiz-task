@@ -63,12 +63,23 @@ const HealthSection: React.FC = () => {
                 {/* Header */}
                 <div className="tracker-header">
                   <div className="tracker-left">
-                    <span className="clock">⏱</span>
+                    <Image
+                      src="/logo/stopwatch.svg"
+                      height={17}
+                      width={17}
+                      alt="clock"
+                    />
+
                     <span>Time Tracker</span>
                   </div>
 
                   <div className="tracker-history">
-                    <span>⏱</span>
+                    <Image
+                      src="/logo/clock.svg"
+                      height={17}
+                      width={17}
+                      alt="clock"
+                    />
                     <span>History</span>
                   </div>
                 </div>
