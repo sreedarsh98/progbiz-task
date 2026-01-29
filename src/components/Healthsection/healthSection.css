@@ -1,0 +1,168 @@
+.health-section {
+  padding: 100px 0;
+  background: #FCFCFD;
+}
+
+/* ================= LOGO LOOP ================= */
+
+.logo-marquee {
+  overflow: hidden;
+  width: 100%;
+  margin-bottom: 60px;
+}
+
+.logo-track {
+  display: flex;
+  width: max-content;
+}
+
+.logo-item {
+  margin-right: 60px;
+  opacity: 0.6;
+}
+
+/* ================= TEXT ================= */
+
+.section-title {
+  font-size: 40px;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+.section-subtitle {
+  font-size: 15px;
+  font-weight: 600;
+  color: #2563eb;
+  margin-top: 10px;
+}
+
+.section-text {
+  color: #6b7280;
+  margin-top: 12px;
+  max-width: 520px;
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 30px;
+  }
+}
+
+/* ================= CARD ================= */
+
+/* OUTER SOFT BOX */
+.tracker-wrapper {
+  background: #F4F5F6;
+  padding: 42px;
+  border-radius: 26px;
+}
+
+/* MAIN CARD */
+.tracker-card {
+  background: #ffffff;
+  border-radius: 22px;
+  padding: 22px;
+}
+
+/* HEADER */
+.tracker-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.tracker-left {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.tracker-history {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 13px;
+  color: #6b7280;
+}
+
+/* TIME BOX */
+.time-box {
+  background: #f3f4f6;
+  border-radius: 16px;
+  padding: 16px;
+  margin: 18px 0;
+}
+
+.time-label {
+  font-size: 13px;
+  color: #6b7280;
+  margin-bottom: 6px;
+}
+
+.time-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.time-row h2 {
+  font-size: 36px;
+  font-weight: 800;
+  margin: 0;
+}
+
+.time-row h2 span {
+  color: #2563eb;
+}
+
+.play-btn {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: none;
+  background: #2563eb;
+  color: #fff;
+  font-size: 16px;
+}
+
+/* TASKS */
+.tasks-title {
+  font-size: 13px;
+  color: #6b7280;
+  margin-bottom: 10px;
+}
+
+.task-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 0;
+}
+
+.task-icon {
+  font-size: 14px;
+  color: #2563eb;
+}
+
+.task-info p {
+  font-size: 14px;
+  margin: 0;
+}
+
+.task-info span {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.dots {
+  margin-left: auto;
+  color: #9ca3af;
+  cursor: pointer;
+}
+
+
+

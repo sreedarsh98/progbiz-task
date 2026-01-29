@@ -1,0 +1,146 @@
+.testimonial-section {
+  padding: 100px 0;
+  background: #ffffff;
+}
+
+.testimonial-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.testimonial-subtitle {
+  margin-top: 8px;
+  font-size: 14px;
+  color: #6b7280;
+}
+
+/* main card */
+.testimonial-card {
+  max-width: 720px;
+  margin: 50px auto 0;
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 22px;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.06);
+}
+
+.testimonial-text {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #374151;
+}
+
+.testimonial-user {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  align-items: center;
+}
+
+.avatar {
+  width: 42px;
+  height: 42px;
+  background: #d1a084;
+  border-radius: 50%;
+}
+
+.testimonial-user h5 {
+  margin: 0;
+  font-size: 15px;
+}
+
+.testimonial-user span {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+/* bottom cards */
+.testimonial-mini {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  margin-top: 30px;
+}
+
+.mini-card {
+  background: #f9fafb;
+  padding: 12px 18px;
+  border-radius: 14px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  min-width: 180px;
+  opacity: 0.6;
+  transition: 0.3s;
+}
+
+.mini-card.active {
+  background: #ffffff;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  opacity: 1;
+}
+
+.mini-avatar {
+  width: 34px;
+  height: 34px;
+  background: #d1a084;
+  border-radius: 50%;
+}
+
+.mini-card p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.mini-card span {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+/* ================= NAV BUTTONS ================= */
+
+.swiper-button-prev,
+.swiper-button-next {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* LEFT BUTTON (outline) */
+.swiper-button-prev {
+  background: #ffffff;
+  border: 1.5px solid #d1d5db;
+  color: #9ca3af;
+}
+
+/* RIGHT BUTTON (filled) */
+.swiper-button-next {
+  background: #3b6cff;
+  color: #ffffff;
+}
+
+/* arrow icons */
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* hover effect */
+.swiper-button-prev:hover {
+  background: #f9fafb;
+}
+
+.swiper-button-next:hover {
+  background: #295bff;
+}
+.testimonial-section
+  .swiper-button-prev::after,
+.testimonial-section
+  .swiper-button-next::after {
+  font-size: 12px !important;
+}

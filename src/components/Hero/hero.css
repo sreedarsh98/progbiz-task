@@ -1,0 +1,135 @@
+.hero-section {
+  padding-top: 40px;
+  /* fixed navbar space */
+  /* padding-bottom: 100px; */
+  background: linear-gradient(120deg,
+      #eef7ff 0%,
+      #ffffff 60%);
+  text-align: center;
+}
+
+/* ================= IMAGE ================= */
+
+.hero-image-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.hero-image {
+  /* max-width: 900px; */
+  width: 100%;
+}
+
+/* ================= USERS ================= */
+
+.hero-users {
+  margin-top: 20px;
+}
+
+.user-icons {
+  display: flex;
+}
+
+.user-icons span {
+  width: 34px;
+  height: 34px;
+  background: #f97316;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  margin-left: -10px;
+}
+
+.hero-users p {
+  font-size: 15px;
+  color: #333;
+}
+
+/* ================= TEXT ================= */
+
+.hero-title {
+  font-size: 64px;
+  font-weight: 600;
+  color: #23262F;
+  margin-bottom: 16px;
+}
+
+.hero-text {
+  max-width: 500px;
+  margin: auto;
+  font-size: 18px;
+  color: #777E90;
+  line-height: 1.7;
+}
+
+/* ================= BUTTONS ================= */
+
+.hero-buttons button {
+  padding: 14px 32px;
+  font-weight: 600;
+  font-size: 15px;
+  border-radius: 50px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+}
+
+.hero-buttons .btn-light {
+  background: #fff;
+  border: none;
+}
+
+.hero-buttons .btn-outline-light {
+  border: 1px solid #e5e7eb;
+  color: #111;
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 36px;
+  }
+
+  .hero-image {
+    max-width: 100%;
+  }
+
+  .hero-text {
+    font-size: 15px;
+  }
+}
+
+
+.user-icons {
+  display: flex;
+  align-items: center;
+}
+
+.avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid #fff;
+  margin-left: -10px;
+}
+
+.avatar:first-child {
+  margin-left: 0;
+}
+
+.avatar img {
+  object-fit: cover;
+}
+
+.users{
+  color: #23262F;
+}
+.users .count{
+  font-size: 24px;
+  font-weight: 700;
+
+}
+.users .cont{
+  font-size: 16px;
+  font-weight: 400;
+}
