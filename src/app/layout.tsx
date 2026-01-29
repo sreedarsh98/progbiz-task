@@ -24,11 +24,10 @@ export default function RootLayout({
     <html lang="en">
       <body className={manrope.variable}>
        
-          <Navbar />
           <main style={{ paddingTop: "80px" }}>
             {children}
           </main>
-          <Footer/>
+         
         
       </body>
     </html>
