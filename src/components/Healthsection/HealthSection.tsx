@@ -93,7 +93,12 @@ const HealthSection: React.FC = () => {
                       10:34<span>:00</span>
                     </h2>
 
-                    <button className="play-btn">▶</button>
+                    <Image
+                      src="/logo/play.svg"
+                      height={60}
+                      width={60}
+                      alt="paly"
+                    />
                   </div>
                 </div>
 
@@ -102,7 +107,12 @@ const HealthSection: React.FC = () => {
                   <p className="tasks-title">Previous Tasks</p>
 
                   <div className="task-row">
-                    <span className="task-icon">✳</span>
+                    <Image
+                      src="/logo/loom.svg"
+                      height={22}
+                      width={22}
+                      alt="paly"
+                    />
                     <div className="task-info">
                       <p>Loom UI Design System</p>
                       <span>1:20:35</span>
@@ -111,7 +121,12 @@ const HealthSection: React.FC = () => {
                   </div>
 
                   <div className="task-row">
-                    <span className="task-icon">✳</span>
+                    <Image
+                      src="/logo/loom.svg"
+                      height={22}
+                      width={22}
+                      alt="paly"
+                    />
                     <div className="task-info">
                       <p>Loom UI / UX Designer</p>
                       <span>1:45:35</span>

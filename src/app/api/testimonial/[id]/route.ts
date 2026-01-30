@@ -1,38 +1,33 @@
 import { connectDB } from "@/lib/db";
-import Faq from "@/models/Faq";
+import Testimonial from "@/models/Testimonial";
 import { NextResponse } from "next/server";
+
+// optional GET (fixes routing bug)
+export async function GET() {
+  return NextResponse.json({ ok: true });
+}
 
 export async function DELETE(req: Request) {
   try {
     await connectDB();
 
-    const url = new URL(req.url);
-    const id = url.pathname.split("/").pop();
+    const id = req.url.split("/").pop();
 
-    if (!id) {
-      return NextResponse.json(
-        { message: "ID not provided" },
-        { status: 400 }
-      );
-    }
-
-    const deleted = await Faq.findByIdAndDelete(id);
+    const deleted = await Testimonial.findByIdAndDelete(id);
 
     if (!deleted) {
       return NextResponse.json(
-        { message: "FAQ not found" },
+        { message: "Testimonial not found" },
         { status: 404 }
       );
     }
 
     return NextResponse.json(
-      { message: "FAQ deleted successfully" },
+      { message: "Deleted successfully" },
       { status: 200 }
     );
 
   } catch (error) {
-    console.error("DELETE ERROR:", error);
-
     return NextResponse.json(
       { message: "Delete failed" },
       { status: 500 }
