@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 
@@ -8,33 +8,33 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "./testimonials.css";
 
-const testimonials = [
-  {
-    text: `I've tried countless health apps, but none come close to this.
-    The AI truly understands my needs—it suggested daily routines and nutrition
-    that actually fit my lifestyle. Within weeks, I felt more energized,
-    slept better, and became more mindful.`,
-    name: "Ava L.",
-    role: "Marketing Executive",
-    tag: "Empowered by AI Wellness Journeys",
-  },
-  {
-    text: `This app helped me maintain discipline and clarity.
-    The guidance feels human and extremely accurate.`,
-    name: "Namo Serlina",
-    role: "CEO Delego",
-    tag: "Business Leader Wellness",
-  },
-  {
-    text: `The personalization is unmatched. It adapts as my routine changes.`,
-    name: "Ava L.",
-    role: "5 Star Rated",
-    tag: "Verified Premium User",
-  },
-];
+interface Testimonial {
+  _id: string;
+  text: string;
+  name: string;
+  role: string;
+  tag: string;
+}
 
 const Testimonials = () => {
+  const [testimonials, setTestimonials] = useState<Testimonial[]>([]);
   const [active, setActive] = useState(0);
+
+  useEffect(() => {
+    const fetchTestimonials = async () => {
+      try {
+        const res = await fetch("/api/testimonial");
+        const data = await res.json();
+        setTestimonials(data);
+      } catch (error) {
+        console.error("Failed to load testimonials");
+      }
+    };
+
+    fetchTestimonials();
+  }, []);
+
+  if (testimonials.length === 0) return null;
 
   return (
     <section className="testimonial-section">
@@ -60,10 +60,12 @@ const Testimonials = () => {
           className="testimonial-swiper"
         >
           {testimonials.map((item, index) => (
-            <SwiperSlide key={index}>
+            <SwiperSlide key={item._id}>
               <div className="testimonial-card">
 
-                <p className="testimonial-text">“{item.text}”</p>
+                <p className="testimonial-text">
+                  “{item.text}”
+                </p>
 
                 <div className="testimonial-user">
                   <div className="avatar"></div>
@@ -82,7 +84,7 @@ const Testimonials = () => {
         <div className="testimonial-mini">
           {testimonials.map((item, i) => (
             <div
-              key={i}
+              key={item._id}
               className={`mini-card ${
                 i === active ? "active" : ""
               }`}
