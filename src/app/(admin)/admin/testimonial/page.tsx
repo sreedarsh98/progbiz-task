@@ -99,7 +99,7 @@ export default function AdminTestimonial() {
             <th>Name</th>
             <th>Role</th>
             <th>Tag</th>
-            <th width="100">Action</th>
+            <th >Action</th>
           </tr>
         </thead>
         <tbody>

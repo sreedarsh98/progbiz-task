@@ -82,7 +82,7 @@ export default function AdminFaq() {
           <tr>
             <th>Question</th>
             <th>Answer</th>
-            <th width="120">Action</th>
+            <th >Action</th>
           </tr>
         </thead>
 
